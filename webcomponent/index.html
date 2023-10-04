@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Web Component</title>
+  </head>
+  <body>
+    <my-webcomponent>
+      <span slot="my-slot">Child content</span>
+    </my-webcomponent>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+
+  <template id="my-template">
+    <style>
+      p {
+        color: white;
+        background-color: #666;
+        padding: 5px;
+      }
+    </style>
+    <p>Text in component</p>
+    <p>
+      <slot name="my-slot">My default text</slot>
+    </p>
+  </template>
+</html>
